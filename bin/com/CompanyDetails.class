@@ -1,0 +1,21 @@
+Êþº¾   1 *  com/CompanyDetails  java/lang/Object companyName Ljava/lang/String; 
+maxSharePrice I year month <init> ()V Code
+     LineNumberTable LocalVariableTable this Lcom/CompanyDetails; getCompanyName ()Ljava/lang/String;	     setCompanyName (Ljava/lang/String;)V getMaxSharePrice ()I	     setMaxSharePrice (I)V getYear	  " 	  setYear getMonth	  & 
+  setMonth 
+SourceFile CompanyDetails.java !                 	     
+    	     
+   /     *· ±           
+                 
+   /     *´ °                            
+   >     *+µ ±       
+    #  $                       
+   /     *´ ¬           ,                 
+   >     *µ ±       
+    5  6                        
+   /     *´ !¬           >              #   
+   >     *µ !±       
+    G  H                	    $   
+   /     *´ %°           P              '   
+   >     *+µ %±       
+    Y  Z                
+    (    )
