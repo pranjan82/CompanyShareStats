@@ -1,0 +1,36 @@
+Êþº¾   1 ƒ  test/Tester  junit/framework/TestCase <init> ()V Code
+  	   LineNumberTable LocalVariableTable this 
+Ltest/Tester; test_fillCompanyNames  java/util/Scanner	    java/lang/System   in Ljava/io/InputStream;
+     (Ljava/io/InputStream;)V	     out Ljava/io/PrintStream;  GPlease enter the fullpath of correctly formatted csv file (test data): 
+ ! # " java/io/PrintStream $ % println (Ljava/lang/String;)V
+  ' ( ) nextLine ()Ljava/lang/String; + java/io/BufferedReader - java/io/FileReader
+ , /  %
+ * 1  2 (Ljava/io/Reader;)V
+ * 4 5 ) readLine
+ 7 9 8 com/CSVLineParser : ; fillCompanyNames )(Ljava/lang/String;)[Lcom/CompanyDetails;
+  = > ? assertEquals (II)V
+ A C B java/io/FileNotFoundException D  printStackTrace
+ F C G java/io/IOException Ljava/util/Scanner; filepath Ljava/lang/String; br Ljava/io/BufferedReader; header cd [Lcom/CompanyDetails; fnf Ljava/io/FileNotFoundException; ioe Ljava/io/IOException; %test_fillCompanyNames_illFormatHeader V IPlease enter the fullpath of ill- formatted header csv file (test data): 
+  X > Y '(Ljava/lang/Object;Ljava/lang/Object;)V test_checkMaxSharePrice O ] com/CSVLinePresentation
+ \ 	
+ ` b a java/lang/String c ) trim e  
+ ` g h i equals (Ljava/lang/Object;)Z
+ \ k l  clear
+ 7 n o p updateLinePresentation .(Ljava/lang/String;Lcom/CSVLinePresentation;)V
+ 7 r s t updateCompanyDetails 1(Lcom/CSVLinePresentation;[Lcom/CompanyDetails;)V
+ v x w com/CompanyDetails y z getMaxSharePrice ()I compDetails aCSVLinePresObj Lcom/CSVLinePresentation; line i I 
+SourceFile Tester.java !               /     *· ±    
+                 
+              S» Y² · L² ¶  +¶ &MN» *Y» ,Y,· .· 0N-¶ 3:¸ 6:¾¸ <§ :¶ @§ 
+:¶ E±   > A A  > K F  
+   6 
+            $ * % 0 & 7 ' A ) C + K - M / R 1    R    S  
+    H  H   ; I J   9 K L  0  M J  7 
+ N O  C  P Q  M  R S   T          R» Y² · L² U¶  +¶ &MN» *Y» ,Y,· .· 0N-¶ 3:¸ 6:¸ W§ :¶ @§ 
+:¶ E±   = @ A  = J F  
+   6 
+   ;  <  =  ?  C * D 0 E 7 F @ H B J J L L N Q P    R    R  
+    G  H   : I J   8 K L  0  M J  7 	 N O  B  P Q  L  R S   Z     ,    » Y² · L² ¶  +¶ &MNÀ [:» *Y» ,Y,· .· 0N-¶ 3:¸ 6:¾¸ <» \Y· ^::§ #¶ _d¶ fš ¶ j¸ m¸ q-¶ 3Y:ÇÿÙ§ :¶ @§ 
+:¶ E6§ }ª     u          #   4   E   V   g2¶ uè¸ <§ D2¶ uÚ¸ <§ 32¶ uã¸ <§ "2¶ uç¸ <§ 2¶ uã¸ <„¾¡ÿ±    } € A   } Š F  
+   z    X  Y  Z  \  ]   a 0 b 6 c = d D f M h P i S k ` m e n l o s i € s ‚ u Š w Œ y ‘ | — ~ ¼ € Í  Þ ‚ ï ƒ  „ | ‡    p     
+     H   I J    K L    ú { O  6 J M J  M 3 | }  P 0 ~ J  ‚  P Q  Œ  R S  ” …  €       ‚
